@@ -1,0 +1,10 @@
+/**
+ * Main
+ */
+
+.container {
+  margin: 0 auto;
+  padding-left: 1#{$nv-base-unit};
+  padding-right: 1#{$nv-base-unit};
+  max-width: $nv-container-width;
+}

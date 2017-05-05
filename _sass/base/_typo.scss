@@ -1,0 +1,114 @@
+/**
+ * Typography
+ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: $nv-text-margin-top;
+  margin-bottom: .382#{$nv-base-unit};
+  line-height: $nv-headings-line-height;
+  text-rendering: optimizeLegibility;
+}
+
+/*
+ * Headings specific font size
+ */
+
+h1 { font-size: $nv-font-size-h1;  }
+h2 { font-size: $nv-font-size-h2;  }
+h3 { font-size: $nv-font-size-h3;  }
+h4 { font-size: $nv-font-size-h4;  }
+h5 { font-size: $nv-font-size-h5;  }
+
+/*
+ * Paragraph
+ */
+
+p {
+  margin-top: $nv-text-margin-top;
+  margin-bottom: $nv-baseline;
+}
+
+.lead {
+  color: $nv-gray-light;
+  font-size: 1.125#{$nv-base-unit};
+}
+
+small {
+  font-size: 90%;
+}
+
+/*
+ * Lists
+ *
+ * `ul` inside a `nav` element doesn't need the list style
+ */
+
+nav ul,
+nav ol {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+ul,
+ol,
+dl {
+  margin-bottom: $nv-text-margin-bottom;
+  margin-top: 0;
+  line-height: $nv-line-height;
+}
+
+li > ul,
+li > ol {
+  margin-bottom: 0;
+}
+
+/*
+ * Code
+ */
+
+pre {
+  margin-top: 0;
+  margin-bottom: 0;
+  white-space: pre-wrap;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: $nv-mono-font;
+  font-size: .8em;
+}
+
+/*
+ * Quotes
+ */
+
+blockquote {
+  padding-left: 1.25#{$nv-base-unit};
+  margin: 1#{$nv-base-unit} 0;
+  font-style: italic;
+  border-left: 5px solid $nv-gray-lighter;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+/*
+ * Abbreviations
+ */
+
+abbr {
+  cursor: help;
+  font-variant: small-caps;
+  font-weight: bold;
+  text-transform: lowercase;
+  letter-spacing: .1em;
+}

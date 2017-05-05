@@ -1,0 +1,37 @@
+/**
+ * Navigation
+ */
+
+// .main-navigation {}
+
+/*
+ * Menu horizontal
+ */
+
+.nv-menu-bar {
+  @extend .clearfix;
+
+  display: block;
+
+  .nv-menu-item {
+    float: left;
+    margin-right: 1em;
+  }
+}
+
+
+/*
+ * Menu vertical
+ */
+
+// .nv-menu {}
+
+/*
+ * Menu list
+ */
+
+.nv-menu-list {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}

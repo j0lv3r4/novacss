@@ -1,0 +1,97 @@
+/**
+ * Buttons
+ */
+
+// Basic btn structure
+%btn-static {
+  display: inline-block;
+  padding: .7em 1.2em;
+  margin: .3em 1em 1em 0;
+  text-decoration: none;
+  text-align: center;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: bold;
+  white-space: nowarp;
+  line-height: 1;
+  cursor: pointer;
+  border: 0;
+  border-radius: $nv-btn-border-radius;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+// Style the button
+@mixin btn($background-color, $text-color, $border-color) {
+  color: $text-color;
+  // background-color: $background-color;
+  // border: 1px solid $border-color;
+
+  background: -webkit-linear-gradient(
+    top,
+    $background-color 0%,
+    darken($background-color, 8%) 100%
+  );
+
+  background: linear-gradient(
+    to bottom,
+    $background-color 0%,
+    darken($background-color, 8%) 100%
+  );
+
+
+  &:hover {
+    color: $text-color;
+    text-decoration: none;
+    background: -webkit-linear-gradient(
+      top,
+      darken($background-color, 4%) 0%,
+      darken($background-color, 12%) 100%
+    );
+    background: linear-gradient(
+      to bottom,
+      darken($background-color, 4%) 0%,
+      darken($background-color, 12%) 100%
+    );
+    border-color: darken($background-color, 5%);
+  }
+
+  &:active {
+    background-color: darken($background-color, 2%);
+    border-color: darken($background-color, 2%);
+  }
+}
+
+a.nv-btn,
+button.nv-btn,
+.nv-btn {
+  @extend %btn-static;
+
+  @include btn(
+    $nv-btn-default-bg,
+    $nv-btn-default-color,
+    $nv-btn-default-border
+  );
+
+  box-shadow: 0 2px 0 darken($nv-btn-default-bg, 15%);
+
+  // &:hover {
+  //   border-color: lighten($nv-btn-default-color, 10%);
+  // }
+}
+
+a.nv-btn-primary,
+button.nv-btn-primary,
+.nv-btn-primary {
+  @extend %btn-static;
+
+  @include btn(
+    $nv-btn-primary-bg,
+    $nv-btn-primary-color,
+    $nv-btn-primary-bg
+  );
+
+  box-shadow: 0 2px 0 darken($nv-btn-primary-bg, 15%);
+}

@@ -1,0 +1,39 @@
+/**
+ * Feedback
+ */
+
+[class^="nv-alert-"] {
+  margin: 1em 0;
+  padding: .618em;
+  border: 1px solid;
+
+  p {
+    margin: 0;
+  }
+}
+
+@mixin alert($nv-color) {
+  border-color: lighten($nv-color, 30%);
+  background-color: lighten($nv-color, 45%);
+  border-radius: 4px;
+
+  strong {
+    color: $nv-color;
+  }
+}
+
+.nv-alert-info {
+  @include alert($nv-feedback-color-information);
+}
+
+.nv-alert-error {
+  @include alert($nv-feedback-color-error);
+}
+
+.nv-alert-warning {
+  @include alert($nv-feedback-color-warning);
+}
+
+.nv-alert-success {
+  @include alert($nv-feedback-color-success);
+}

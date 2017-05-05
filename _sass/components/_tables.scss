@@ -1,0 +1,26 @@
+/**
+ * Tables
+ */
+
+table {
+  margin-bottom: 1#{$nv-base-unit};
+  width: 100%;
+  font-size: 85%;
+  border: 1px solid lighten($nv-text-color, 50%);
+  border-collapse: collapse;
+}
+
+td,
+th {
+  padding: .25#{$nv-base-unit} .5#{$nv-base-unit};
+  border: 1px solid lighten($nv-text-color, 70%);
+}
+
+th {
+  text-align: left;
+}
+
+tbody tr:nth-child(odd) td,
+tbody tr:nth-child(odd) th {
+  background-color: lighten($nv-text-color, 75%);
+}

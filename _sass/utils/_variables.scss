@@ -1,0 +1,104 @@
+// Scaffold
+//
+// Global styles.
+
+$nv-base-unit: 'rem' !default;
+$nv-baseline: 1#{$nv-base-unit} !default;
+$nv-grid-gutter: 1% !default;
+$nv-container-width: 61.25#{$nv-base-unit} !default; // 980px
+$nv-body-bg: #fff !default;
+
+// Colors
+
+// Brand colors
+$nv-brand-primary: #3498db;
+
+// Custom colors
+$nv-color-gray-base: #000;
+$nv-gray-darker: #222;
+$nv-gray-dark: #333;
+$nv-gray: #555;
+$nv-gray-light: #777;
+$nv-gray-lighter: #eee;
+
+$nv-brown: rgb(165, 42, 42);
+
+// Typography
+
+$nv-body-font: 'Lato', sans-serif;
+$nv-mono-font: 'Menlo', Inconsolata, Consolas, Monaco, monospace;
+$nv-font-size: 16px;
+$nv-line-height: 1.618 !default;
+$nv-text-color: #333 !default;
+$nv-text-margin-top: $nv-baseline !default;
+$nv-text-margin-bottom: $nv-baseline !default;
+$nv-link-color: $nv-brand-primary !default;
+$nv-link-decoration: none;
+$nv-link-hover-decoration: underline;
+$nv-link-hover-color: darken($nv-link-color, 15%) !default;
+
+// http://www.modularscale.com/?1,.5&em&1.618&sass&text
+$nv-font-size-h1: 2.618#{$nv-base-unit};
+$nv-font-size-h2: 2.118#{$nv-base-unit};
+$nv-font-size-h3: 1.618#{$nv-base-unit};
+$nv-font-size-h4: 1.309#{$nv-base-unit};
+$nv-font-size-h5: 1#{$nv-base-unit};
+$nv-font-size-h6: 1#{$nv-base-unit};
+
+$nv-headings-font: inherit;
+$nv-headings-font-weight: 500;
+$nv-headings-line-height: 1.125;
+$nv-headings-color: $nv-text-color;
+$nv-headings-margin-bottom: $nv-text-margin-bottom;
+
+// Border radius
+
+$nv-border-radius-base: 4px;
+$nv-border-radius-large: 6px;
+$nv-border-radius-small: 3px;
+
+// Buttons
+
+$nv-btn-border-radius: $nv-border-radius-base;
+
+$nv-btn-default-bg: $nv-gray-lighter;
+$nv-btn-default-color: $nv-gray;
+$nv-btn-default-border: $nv-btn-default-bg;
+
+$nv-btn-outline-bg: transparent;
+$nv-btn-outline-color: #333;
+$nv-btn-outline-border: #ccc;
+
+$nv-btn-primary-bg: $nv-brand-primary;
+$nv-btn-primary-color: #fff;
+$nv-btn-primary-border: lighten($nv-btn-primary-bg, 20%);
+
+// Forms
+
+$nv-form-display: block;
+
+$nv-form-border-radius: 5px;
+$nv-form-border-width: 1px;
+$nv-form-border-style: solid;
+$nv-form-border-color: #ccc;
+
+$nv-form-input-height: 40px;
+$nv-form-input-width: 100%;
+$nv-form-input-max-width: 400px;
+$nv-form-input-bg-color: #fff;
+
+$nv-form-focus-bg-color: lighten($nv-gray-lighter, 5%);
+$nv-form-focus-border-color: $nv-brand-primary;
+$nv-form-focus-font-color: #aaa;
+
+// Icons
+
+$nv-icon-roundness: 3.778px;
+$nv-icon-border-color: #333;
+
+// Feedback
+
+$nv-feedback-color-information: #439ccf;
+$nv-feedback-color-error: #e72915;
+$nv-feedback-color-warning: #d35400;
+$nv-feedback-color-success: #74a730;
