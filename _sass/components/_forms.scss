@@ -58,6 +58,7 @@
     max-width: $nv-form-input-max-width;
     padding: $nv-form-input-height / 5;
     background-color: $nv-form-input-bg-color;
+    font-family: inherit;
     font-size: 1#{$nv-base-unit};
 
     border-radius: $nv-form-border-radius;

@@ -3,28 +3,50 @@
  * and should not be used on production.
  */
 
-body { margin: 0; }
+// Local variables
+$doc-color-black: #333;
+$doc-color-bg: #ecf0f1;
+$doc-color-code-bg: #f8f8f8;
+$doc-color-code-bs: #e6ebed;
+$doc-border-radius: 6px;
+
+body { 
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: $doc-color-bg;
+  // letter-spacing: 1px;
+}
+
+.container {
+  max-width: 48em;
+}
 
 /*
  * Header
  */
 
 .masthead {
-  padding: 1em 0;
-  background-color: $nv-gray-lighter;
-
-  a {
-    color: $nv-gray-dark;
-
-    &:hover {
-      color: $nv-gray-light;
-      text-decoration: none;
-    }
-  }
+  padding: 4em 0;
+  background-color: $doc-color-black;
+  color: #fff;
 }
 
 .masthead-title {
   margin: 0;
+}
+
+.doc-btn-cta {
+  padding-left: 2em !important;
+  padding-right: 2em !important;
+}
+
+.doc-cta {
+  text-align: center;
+}
+
+.doc-github-link {
+  display: block;
+  margin-top: -.5em;
 }
 
 /*
@@ -59,6 +81,16 @@ main {
 }
 
 /*
+ * Footer
+ */
+.site-footer {
+  padding-top: 2em;
+  padding-bottom: 2em;
+  background-color: $doc-color-black;
+  color: #fff;
+}
+
+/*
  * Separator
  */
 
@@ -66,7 +98,12 @@ main {
   width: 40%;
   margin-top: 1em;
   margin-bottom: 3em;
-  border: 3px solid $nv-gray-lighter;
+  border: 3px solid #ccc;
+}
+
+.hr-sep {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
 }
 
 /*
@@ -128,7 +165,7 @@ main {
 .demo-col {
   margin-top: 1em;
   padding: .418em 0;
-  background-color: $nv-gray-lighter;
+  background-color: darken($doc-color-code-bs, 15%);
   font-size: .8em;
   font-family: $nv-mono-font;
   text-align: center;
@@ -140,16 +177,11 @@ main {
 }
 
 /* Code */
-code,
-pre {
-  font-family: Menlo, Monaco, "Courier New", monospace;
-}
-
 code {
   padding: 3px 4px;
   color: #bf616a;
-  background-color: #f9f9f9;
-  border-radius: 3px;
+  background-color: $doc-color-code-bg;
+  border-radius: $doc-border-radius;
 }
 
 pre {
@@ -163,9 +195,9 @@ pre {
   white-space: pre-wrap;
   word-break: break-all;
   word-wrap: break-word;
-  background-color: #f9f9f9;
-  border-radius: 6px;
-  // border: 1px solid #ccc;
+  background-color: $doc-color-code-bg;
+  border-radius: $doc-border-radius;
+  box-shadow: 0.618em 0.618em 0 $doc-color-code-bs; 
 }
 
 pre code {
