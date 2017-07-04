@@ -5,13 +5,13 @@
 // Basic btn structure
 %btn-static {
   display: inline-block;
-  padding: .7em 1.2em;
-  margin: .3em 0 1em 0;
-  text-decoration: none;
-  text-align: center;
+  padding: .8em 2.75em;
+  margin: 0 0 1em;
   font-family: inherit;
   font-size: inherit;
   font-weight: bold;
+  text-decoration: none;
+  text-align: center;
   white-space: nowarp;
   line-height: 1;
   cursor: pointer;
@@ -24,43 +24,18 @@
 }
 
 // Style the button
-@mixin btn($background-color, $text-color, $border-color) {
+@mixin btn($background-color, $text-color) {
   color: $text-color;
-  // background-color: $background-color;
-  // border: 1px solid $border-color;
-
-  background: -webkit-linear-gradient(
-    top,
-    $background-color 0%,
-    darken($background-color, 8%) 100%
-  );
-
-  background: linear-gradient(
-    to bottom,
-    $background-color 0%,
-    darken($background-color, 8%) 100%
-  );
-
+  background-color: $background-color;
 
   &:hover {
     color: $text-color;
     text-decoration: none;
-    background: -webkit-linear-gradient(
-      top,
-      darken($background-color, 4%) 0%,
-      darken($background-color, 12%) 100%
-    );
-    background: linear-gradient(
-      to bottom,
-      darken($background-color, 4%) 0%,
-      darken($background-color, 12%) 100%
-    );
-    border-color: darken($background-color, 5%);
+    background-color: darken($background-color, 8%);
   }
 
   &:active {
-    background-color: darken($background-color, 2%);
-    border-color: darken($background-color, 2%);
+    background-color: darken($background-color, 15%);
   }
 }
 
@@ -71,15 +46,23 @@ button.nv-btn,
 
   @include btn(
     $nv-btn-default-bg,
-    $nv-btn-default-color,
-    $nv-btn-default-border
+    $nv-btn-default-color
   );
+}
 
-  box-shadow: 0 2px 0 darken($nv-btn-default-bg, 15%);
+a.nv-btn-ghost,
+button.nv-btn-ghost,
+.nv-btn-ghost {
+  @extend %btn-static;
 
-  // &:hover {
-  //   border-color: lighten($nv-btn-default-color, 10%);
-  // }
+  background-color: transparent;
+  color: #555;
+  border: 2px solid #777;
+
+  &:hover {
+    color: #333;
+    border-color: #333;
+  }
 }
 
 a.nv-btn-primary,
@@ -89,9 +72,38 @@ button.nv-btn-primary,
 
   @include btn(
     $nv-btn-primary-bg,
-    $nv-btn-primary-color,
-    $nv-btn-primary-bg
+    $nv-btn-primary-color
   );
-
-  box-shadow: 0 2px 0 darken($nv-btn-primary-bg, 15%);
 }
+
+a.nv-btn-success,
+button.nv-btn-success,
+.nv-btn-success {
+  @extend %btn-static;
+
+  @include btn(
+    $nv-color-green,
+    #fff
+  );
+}
+
+a.nv-btn-disabled,
+button.nv-btn-disabled,
+.nv-btn-disabled {
+  @extend %btn-static;
+  opacity: .7;
+
+  @include btn(
+    $nv-btn-default-bg,
+    $nv-btn-default-color
+  );
+}
+
+
+
+        // <p><button class="nv-btn">Default</button></p>
+        // <p><button class="nv-btn-ghost">Ghost</button></p>
+        // <p><button class="nv-btn-primary">Primary</button></p>
+        // <p><button class="nv-btn-success">Success</button></p>
+        // <p><button class="nv-btn-error">Error</button></p>
+        // <p><button class="nv-btn-disabled">Disabled</button></p>

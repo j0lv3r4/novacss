@@ -12,6 +12,7 @@ $nv-body-bg: #fff !default;
 
 // Brand colors
 $nv-brand-primary: #3498db;
+$nv-color-green: #2ecc71;
 
 // Custom colors
 $nv-color-gray-base: #000;
@@ -25,9 +26,9 @@ $nv-brown: rgb(165, 42, 42);
 
 // Typography
 
-$nv-body-font: 'Lato', sans-serif;
+$nv-body-font: 'Karla', sans-serif;
 $nv-mono-font: 'Menlo', Inconsolata, Consolas, Monaco, monospace;
-$nv-font-size: 16px;
+$nv-font-size: 18px;
 $nv-line-height: 1.618 !default;
 $nv-text-color: #333 !default;
 $nv-text-margin-top: $nv-baseline !default;

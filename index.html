@@ -4,7 +4,7 @@ title: Style guide
 ---
 
 <section class="section-components">
-  <div class="container">
+  <div class="container-wide">
     <div class="row">
       <h1 class="section-title">Grid</h1>
 
@@ -94,7 +94,7 @@ title: Style guide
       </div> <!-- .row -->
 
 {% highlight html %}
-<div class="container">
+<div class="container-wide">
   <div class="row">
     <div class="col-4">
       <div class="demo-col">.col-4</div>
@@ -112,7 +112,7 @@ title: Style guide
       <div class="demo-col">.col-6</div>
     </div> <!-- .col-6 -->
   </div> <!-- .row -->
-</div> <!-- .container -->
+</div> <!-- .container-wide -->
 {% endhighlight %}
 
       <hr class="hr-sep">
@@ -252,7 +252,7 @@ title: Style guide
         </div> <!-- .col-1-8 -->
       </div> <!-- .row -->
 {% highlight html %}
-<div class="container">
+<div class="container-wide">
   <div class="row">
     <div class="col-1-2">
       <div class="demo-col">.col-1-2</div>
@@ -273,16 +273,16 @@ title: Style guide
       <div class="demo-col">.col-1-3</div>
     </div> <!-- .col-1-3 -->
   </div> <!-- .row -->
-</div> <!-- .container -->
+</div> <!-- .container-wide -->
 {% endhighlight %}
 
     </div> <!-- .row -->
-  </div> <!-- .container -->
+  </div> <!-- .container-wide -->
 </section> <!-- .section-components -->
 
 
 <section class="section-components">
-  <div class="container">
+  <div class="container-wide">
     <h2 class="section-title">Typography</h2>
 
     <hr class="hr-docs">
@@ -329,37 +329,13 @@ title: Style guide
 
       <footer><a href="#">This is the author.</a></footer>
     </blockquote>
-  </div> <!-- .container -->
+  </div> <!-- .container-wide -->
 </section>
 
-<section class="section-components">
-  <div class="container">
-    <h2 class='section-title'>Buttons</h2>
-
-    <hr class="hr-docs">
-
-    <div class="row">
-      <div class="col-1-2">
-        <h4>Button styles</h4>
-
-        <p><button class="nv-btn">Default style</button></p>
-        <p><button class="nv-btn-primary">Primary style</button></p>
-      </div> <!-- .col-1-2 -->
-
-      <div class="col-1-2">
-        <h4>HTML elements</h4>
-
-        <p><button class="nv-btn">Button</button></p>
-        <p><a href="#" class="nv-btn">Anchor tag</a></p>
-        <p><input type="submit" class="nv-btn" value="Submit input"></p>
-        <p><input type="button" class="nv-btn" value="Button input"></p>
-      </div> <!-- .col-1-2 -->
-    </div> <!-- .row -->
-  </div> <!-- .container -->
-</section> <!-- .section-components -->
+{% include_relative _components/buttons.html %}
 
 <section class="section-components">
-  <div class="container">
+  <div class="container-wide">
     <h2 class="section-title">Forms</h2>
 
     <hr class="hr-docs">
@@ -509,11 +485,11 @@ title: Style guide
         </form>
       </div> <!-- .col-1-3 -->
     </div> <!-- .row -->
-  </div> <!-- .container -->
+  </div> <!-- .container-wide -->
 </section>
 
 <section class="section-components">
-  <div class="container">
+  <div class="container-wide">
     <h2 class="section-title">Feedback</h2>
 
     <hr class="hr-docs">
@@ -543,5 +519,5 @@ title: Style guide
         </div> <!-- .alert-information -->
       </div> <!-- .col-1-2 -->
     </div> <!-- .row -->
-  </div> <!-- .container -->
+  </div> <!-- .container-wide -->
 </section>

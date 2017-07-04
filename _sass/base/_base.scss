@@ -21,6 +21,7 @@ body {
   font-size: $nv-font-size;
   line-height: $nv-line-height;
   text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
   background-color: $nv-body-bg;
 }
 

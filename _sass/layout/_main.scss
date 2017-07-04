@@ -2,9 +2,26 @@
  * Main
  */
 
-.container {
+%container {
   margin: 0 auto;
   padding-left: 1#{$nv-base-unit};
   padding-right: 1#{$nv-base-unit};
-  max-width: $nv-container-width;
+}
+
+.container {
+  @extend %container;
+
+  max-width: 100%;
+}
+
+.container-wide {
+  @extend %container;
+
+  max-width: 75em;
+}
+
+.container-narrow {
+  @extend %container;
+
+  max-width: 46.25em;
 }
